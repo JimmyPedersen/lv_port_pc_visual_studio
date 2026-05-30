@@ -14598,15 +14598,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\LvglPlatform\lvgl\examples\widgets\msgbox\lv_example_msgbox_3.c">
       <Filter>lvgl\examples\widgets\msgbox</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\LvglPlatform\lvgl\examples\widgets\obj\lv_example_obj_1.c">
-      <Filter>lvgl\examples\widgets\obj</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\LvglPlatform\lvgl\examples\widgets\obj\lv_example_obj_2.c">
-      <Filter>lvgl\examples\widgets\obj</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\LvglPlatform\lvgl\examples\widgets\obj\lv_example_obj_3.c">
-      <Filter>lvgl\examples\widgets\obj</Filter>
-    </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)..\LvglPlatform\lvgl\examples\widgets\roller\lv_example_roller_1.c">
       <Filter>lvgl\examples\widgets\roller</Filter>
     </ClCompile>
