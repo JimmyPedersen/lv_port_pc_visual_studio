@@ -6,6 +6,31 @@
 #include "lvgl/examples/lv_examples.h"
 #include "lvgl/demos/lv_demos.h"
 
+
+static void btn_event_jp_cb(lv_event_t* e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    lv_obj_t* btn = lv_event_get_target_obj(e);
+    if (code == LV_EVENT_CLICKED) {
+        static uint8_t cnt = 0;
+        cnt++;
+        lv_obj_t* label = lv_obj_get_child(btn, 0);
+        lv_label_set_text_fmt(label, "Button: %d", cnt);
+    }
+}
+
+void lv_example_get_started_jp2(void)
+{
+    lv_obj_t* btn = lv_button_create(lv_screen_active());
+    lv_obj_set_pos(btn, 10, 10);
+    lv_obj_set_size(btn, 120, 50);
+    lv_obj_add_event_cb(btn, btn_event_jp_cb, LV_EVENT_ALL, NULL);
+
+    lv_obj_t* label = lv_label_create(btn);
+    lv_label_set_text(label, "Button");
+    lv_obj_center(label);
+}
+
 int WINAPI wWinMain(
     _In_ HINSTANCE hInstance,
     _In_opt_ HINSTANCE hPrevInstance,
@@ -74,8 +99,10 @@ int WINAPI wWinMain(
         return -1;
     }
 
-    ::lv_demo_widgets();
-    //::lv_demo_benchmark();
+//    ::lv_demo_widgets();
+ //   ::lv_demo_benchmark();
+
+    lv_example_get_started_jp2();
 
     while (1)
     {
